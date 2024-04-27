@@ -1,0 +1,336 @@
+<%- include("header", {title: title}); %>
+
+    <div class="main_window">
+        <div class="options_container">
+            <div id="checklist_1">
+                <input type="checkbox" id="Röd" checked>
+                <label for="Röd">Röd</label><br>
+
+                <input type="checkbox" id="Vit" checked>
+                <label for="Vit">Vit</label><br>
+
+                <input type="checkbox" id="Brun" checked>
+                <label for="Brun">Brun</label><br>
+
+                <input type="checkbox" id="Lila" checked>
+                <label for="Lila">Lila</label><br>
+
+                <input type="checkbox" id="Rosa" checked>
+                <label for="Rosa">Rosa</label><br>
+
+                <input type="checkbox" id="Aprikos" checked>
+                <label for="Aprikos">Aprikos</label><br>
+
+                <input type="checkbox" id="Orange" checked>
+                <label for="Orange">Orange</label><br>
+
+                <input type="checkbox" id="Gul" checked>
+                <label for="Gul">Gul</label><br>
+
+                <input type="checkbox" id="Cerise" checked>
+                <label for="Cerise">Cerise</label><br>
+
+                <input type="checkbox" id="Purpur" checked>
+                <label for="Purpur">Purpur</label><br>
+
+                <input type="checkbox" id="Blålia" checked>
+                <label for="Blålia">Blålia</label><br>
+
+                <input type="checkbox" id="Lime" checked>
+                <label for="Lime">Lime</label><br>
+
+                <input type="checkbox" id="Blå" checked>
+                <label for="Blå">Blå</label><br>
+            </div>
+            <div id="checklist_2">
+                <input type="checkbox" id="Januari" checked>
+                <label for="Januari">Januari</label><br>
+
+                <input type="checkbox" id="Februari" checked>
+                <label for="Februari">Februari</label><br>
+
+                <input type="checkbox" id="Mars" checked>
+                <label for="Mars">Mars</label><br>
+
+                <input type="checkbox" id="April" checked>
+                <label for="April">April</label><br>
+
+                <input type="checkbox" id="Maj" checked>
+                <label for="Maj">Maj</label><br>
+
+                <input type="checkbox" id="Juni" checked>
+                <label for="Juni">Juni</label><br>
+
+                <input type="checkbox" id="Juli" checked>
+                <label for="Juli">Juli</label><br>
+
+                <input type="checkbox" id="Augusti" checked>
+                <label for="Augusti">Augusti</label><br>
+
+                <input type="checkbox" id="September" checked>
+                <label for="September">September</label><br>
+
+                <input type="checkbox" id="Oktober" checked>
+                <label for="Oktober">Oktober</label><br>
+
+                <input type="checkbox" id="November" checked>
+                <label for="November">November</label><br>
+
+                <input type="checkbox" id="December" checked>
+                <label for="December">December</label><br>
+            </div>
+            <div id="checklist_3">
+                <input type="checkbox" id="Barrväxter" checked>
+                <label for="Barrväxter">Barrväxter</label><br>
+
+                <input type="checkbox" id="Blomsterlök" checked>
+                <label for="Blomsterlök">Blomsterlök</label><br>
+
+                <input type="checkbox" id="Bärbuskar" checked>
+                <label for="Bärbuskar">Bärbuskar</label><br>
+
+                <input type="checkbox" id="Fruktträd" checked>
+                <label for="Fruktträd">Fruktträd</label><br>
+
+                <input type="checkbox" id="Häckväxter" checked>
+                <label for="Häckväxter">Häckväxter</label><br>
+
+                <input type="checkbox" id="Höstväxter" checked>
+                <label for="Höstväxter">Höstväxter</label><br>
+
+                <input type="checkbox" id="Klängsväxter" checked>
+                <label for="Klängsväxter">Klängsväxter</label><br>
+
+                <input type="checkbox" id="Kryddväxter" checked>
+                <label for="Kryddväxter">Kryddväxter</label><br>
+
+                <input type="checkbox" id="Medelhavsväxter" checked>
+                <label for="Medelhavsväxter">Medelhavsväxter</label><br>
+
+                <input type="checkbox" id="Perenner" checked>
+                <label for="Perenner">Perenner</label><br>
+
+                <input type="checkbox" id="Prydnadsbuskar" checked>
+                <label for="Prydnadsbuskar">Prydnadsbuskar</label><br>
+
+                <input type="checkbox" id="Prydnadsträd" checked>
+                <label for="Prydnadsträd">Prydnadsträd</label><br>
+
+                <input type="checkbox" id="Rosor" checked>
+                <label for="Rosor">Rosor</label><br>
+
+                <input type="checkbox" id="Sommarplantor" checked>
+                <label for="Sommarplantor">Sommarplantor</label><br>
+
+                <input type="checkbox" id="Vårblommor" checked>
+                <label for="Vårblommor">Vårblommor</label><br>
+            </div>
+
+            <div id="option_3">
+                <div class="number_input_container">
+                    <label for="min_height">Minsta höjd:</label>
+                    <input type="number" id="min_height" name="min_height" value="0" min="0" max="500">
+                </div>
+                <div class="number_input_container">
+                    <label for="max_height">Högsta höjd:</label>
+                    <input type="number" id="max_height" name="max_height" value="100" min="0" max="500">
+                </div>
+            </div>
+            <button id="postButton">Sort</button>
+        </div>
+        <button id="customButton">Open Options</button>
+
+        <!-- Modal window for displaying options -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modalGrid" class="modal-grid">
+                </div>
+            </div>
+        </div>
+        <div class="scrollable">
+            <table id="dataTable">
+                <thead>
+                    <th>Januari</th>
+                    <th>Februari</th>
+                    <th>Mars</th>
+                    <th>April</th>
+                    <th>Maj</th>
+                    <th>Juni</th>
+                    <th>Juli</th>
+                    <th>Augusti</th>
+                    <th>September</th>
+                    <th>Oktober</th>
+                    <th>November</th>
+                    <th>December</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        var test = <%- JSON.stringify(res) %>;
+        document.addEventListener('DOMContentLoaded', function () {
+            const customButton = document.getElementById('customButton');
+            let modal = document.getElementById('myModal');
+            let modalGrid = document.getElementById('modalGrid');
+            const dataTable = document.getElementById('dataTable');
+            let draggedRow;
+
+            // Function to populate the modal grid with options based on "res"
+            function populateModalGrid() {
+                // Clear the existing content of the modal grid
+                modalGrid.innerHTML = '';
+
+                test.forEach(option => {
+                    let optionElement = document.createElement('button');
+                    let imageElement = document.createElement('img');
+                    imageElement.src = option.image;
+                    imageElement.alt = option.name;
+                    optionElement.textContent = option.name;
+                    optionElement.appendChild(imageElement);
+                    optionElement.classList.add('modal-option');
+                    modalGrid.appendChild(optionElement);
+
+                    // Event listener for option click
+                    optionElement.addEventListener('click', function () {
+                        addRowToTable(option);
+                        closeModal(); // Close the modal after selection
+                    });
+                });
+            }
+
+            function addRowToTable(option) {
+                const newRow = dataTable.getElementsByTagName('tbody')[0].insertRow();
+                newRow.draggable = true;
+                newRow.ondragstart = start;
+                newRow.ondragover = dragover;
+                let draggedRow;
+
+                const headers = Array.from(dataTable.getElementsByTagName('th')).map(th => th.textContent);
+
+                headers.forEach(header => {
+                    const cell = newRow.insertCell();
+                    const months = option.flowering_season ? option.flowering_season.split(',').map(month => month.trim()) : [];
+                    if (months.includes(header) || option.flowering_season === null) {
+                        const img = new Image();
+                        const link = document.createElement('a');
+                        link.href = option.url;
+                        link.target = "_blank";
+                        img.src = option.image;
+                        img.alt = option.name;
+                        img.style.maxWidth = '80px';
+                        img.style.maxHeight = '80px';
+                        img.draggable = false;
+                        link.appendChild(img);
+                        cell.appendChild(link);
+                    } else {
+                        cell.textContent = '';
+                    }
+                });
+
+                // Add drag icon cell
+                const dragCell = newRow.insertCell();
+                dragCell.innerHTML = '<div class="drag-icon">&#9776;</div>';
+            }
+
+
+            // Event listener for custom button click to open modal
+            customButton.addEventListener('click', function () {
+                // Open the modal
+                modal.style.display = 'block';
+
+                // Populate the modal grid with options
+                populateModalGrid();
+            });
+
+            // Event listener for closing the modal when clicking outside of it
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Function to close the modal
+            function closeModal() {
+                modal.style.display = 'none';
+            }
+
+            // Event listener for closing the modal
+            const closeBtn = document.querySelector('.close');
+            closeBtn.addEventListener('click', closeModal);
+
+            // Drag start function
+            function start(event) {
+                draggedRow = event.target;
+            }
+
+            // Drag over function
+            function dragover(event) {
+                event.preventDefault();
+
+                let children = Array.from(event.target.parentNode.parentNode.children);
+
+                if (children.indexOf(event.target.parentNode) > children.indexOf(draggedRow))
+                    event.target.parentNode.after(draggedRow);
+                else
+                    event.target.parentNode.before(draggedRow);
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('postButton').addEventListener('click', async function () {
+                const colors = getCheckboxValues('checklist_1').join();
+                const categories = getCheckboxValues('checklist_3').join();
+                const minHeight = document.getElementById('min_height').value;
+                const maxHeight = document.getElementById('max_height').value;
+                const months = getCheckboxValues('checklist_2').join();
+
+                const url = `/index/sorted/${colors}/${minHeight}/${maxHeight}/${categories}/${months}`;
+
+                window.location.href = url;
+
+                function getCheckboxValues(checklistId) {
+                    const checkboxes = document.querySelectorAll(`#${checklistId} input[type="checkbox"]`);
+                    const checkedValues = Array.from(checkboxes)
+                        .filter(checkbox => checkbox.checked)
+                        .map(checkbox => checkbox.id);
+                    return checkedValues;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const minInput = document.getElementById('min_height');
+        const maxInput = document.getElementById('max_height');
+
+        minInput.addEventListener('change', function () {
+            if (parseInt(minInput.value) > parseInt(maxInput.value)) {
+                minInput.value = maxInput.value;
+            }
+            if (parseInt(minInput.value) < 0) {
+                minInput.value = 0;
+            }
+            if (parseInt(minInput.value) > 500) {
+                minInput.value = 500;
+            }
+        });
+
+        maxInput.addEventListener('change', function () {
+            if (parseInt(maxInput.value) < parseInt(minInput.value)) {
+                maxInput.value = minInput.value;
+            }
+            if (parseInt(maxInput.value) < 0) {
+                maxInput.value = 0;
+            }
+            if (parseInt(maxInput.value) > 500) {
+                maxInput.value = 500;
+            }
+        });
+
+    </script>
+    <%- include("footer"); %>

@@ -1,0 +1,7 @@
+{
+    "host":     "DESKTOP-N9CNRBA.local",
+    "user":     "dbadm",
+    "password": "BAsse123//",
+    "database": "blomsterlandet",
+    "multipleStatements": true
+}
